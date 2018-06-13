@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="author" content="Paola Martinez Bautista">
+	<meta name="description" content=" Choose vowel kids challenge!">
+	<meta name="keywords" content="Choose vowel, kids challenge, colors vowels, JavaScript, CSS, HTML5">
+
+	<title>Vowels Kids Challenge!</title>
+
+	<link rel="stylesheet" href="vowels.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="row">
+		<div class="col-full instructions">
+			<h1> Chose the correct vowel </h1>
+			<h2> Your score is
+				<span id="score">0</span>/10</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div id="dropzone-holder" class="col-half ">
+			<div class="col-quarter hitbox">
+				<img id="question" class="answer hide" src="img/correct-green.png" />
+				<div id="dropzone-vowel-E" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-half hitbox">
+			<div id="dropzone-container" class="dropzone container" ondragenter="return enter(event)" ondragover="return over(event)"
+			 ondrop="return drop(event)">
+				<img id="icon-vowel-A" class="icon" onclick="imgClic('icon-vowel-A','vowel-A')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/vowel-A.png">
+				<img id="icon-vowel-I" class="icon" onclick="imgClic('icon-vowel-I','vowel-I')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/vowel-I.png">
+				<img id="icon-vowel-O" class="icon" onclick="imgClic('icon-vowel-O' ,'vowel-O')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/vowel-O.png">
+				<img id="icon-vowel-U" class="icon" onclick="imgClic('icon-vowel-U','vowel-U')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/vowel-U.png">
+				<img id="icon-vowel-a2" class="icon" onclick="imgClic('icon-vowel-a2','vowel-a2')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/vowel-a2.png">
+				<img id="icon-vowel-E" onclick="imgClic('icon-vowel-E','vowel-E')" class="icon" src="img/vowel-E.png">
+				<img id="icon-vowel-o2" class="icon" onclick="imgClic('icon-vowel-o2','vowel-o2')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/vowel-o2.png">
+				<img id="icon-vowel-u2" onclick="imgClic('icon-vowel-u2','vowel-u2')" class="icon" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/vowel-u2.png">
+				<img id="icon-vowel-i2" onclick="imgClic('icon-vowel-i2','vowel-i2')" class="icon" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/vowel-i2.png">
+				<img id="icon-vowel-e2" onclick="imgClic('icon-vowel-e2','vowel-e2')" class="icon" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/vowel-e2.png">
+
+			</div>
+		</div>
+	</div>
+
+	<!-- The Modal -->
+
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2 style="text-align:center">Game Over!</h2>
+
+			<h3 style="text-align:center">Your score is
+				<span id="Modelscore">0</span>/10.
+			</h3>
+
+			<a href="index.html" id="btnHome" class="btn btn-primary" role="button">Home</a>
+
+			<a href="vowel.html" id="btnrefresh" class="btn btn-success">Refresh</a>
+		</div>
+        <!---->
+	</div>
+	<script type="text/javascript" src="js/vowel.js"></script>
+</body>
+
+</html>

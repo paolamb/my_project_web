@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="author" content="Paola Martinez Bautista">
+	<meta name="description" content=" Choose geometric shapes kids challenge!">
+	<meta name="keywords" content="Choose shapes, kids challenge, Geometric Shapes, JavaScript, CSS, HTML5">
+
+	<title>Geometric shapes Kids Challenge!</title>
+
+	<link rel="stylesheet" href="geometric_shapes.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="row">
+		<div class="col-full instructions">
+			<h1> Chose the correct shape </h1>
+			<h2> Your score is
+				<span id="score">0</span>/10</h2>
+		</div>
+	</div>
+
+	<div class="row">
+		<div id="dropzone-holder" class="col-half ">
+			<div class="col-quarter hitbox">
+				<img id="question" class="answer hide" src="img/correct-green.png" />
+				<div id="dropzone-rectangle" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-half hitbox">
+			<div id="dropzone-container" class="dropzone container" ondragenter="return enter(event)" ondragover="return over(event)"
+			 ondrop="return drop(event)">
+				<img id="icon-square" class="icon" onclick="imgClic('icon-square','square')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/square.png">
+				<img id="icon-circle" class="icon" onclick="imgClic('icon-circle','circle')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/circle.png">
+				<img id="icon-diamond" class="icon" onclick="imgClic('icon-diamond' ,'diamond')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/diamond.png">
+				<img id="icon-star" class="icon" onclick="imgClic('icon-star','star')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/star.png">
+				<img id="icon-triangle" class="icon" onclick="imgClic('icon-triangle','triangle')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/triangle.png">
+				<img id="icon-rectangle" onclick="imgClic('icon-rectangle','rectangle')" class="icon" src="img/rectangle.png">
+				<img id="icon-oval" class="icon" onclick="imgClic('icon-oval','oval')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/oval.png">
+				<img id="icon-pentagon" onclick="imgClic('icon-pentagon','pentagon')" class="icon" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/pentagon.png">
+				<img id="icon-hexagon" onclick="imgClic('icon-hexagon','hexagon')" class="icon" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/hexagon.png">
+				<img id="icon-heart" onclick="imgClic('icon-heart','heart')" class="icon" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/heart.png">
+			</div>
+		</div>
+	</div>
+	<!-- The Modal -->
+
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2 style="text-align:center">Game Over!</h2>
+
+			<h3 style="text-align:center">Your score is
+				<span id="Modelscore">0</span>/10.
+			</h3>
+
+			<a href="index.html" id="btnHome" class="btn btn-primary" role="button">Home</a>
+
+			<a href="geometric_shapes.html" id="btnrefresh" class="btn btn-success">Refresh</a>
+		</div>
+		<!---->
+	</div>
+	<script type="text/javascript" src="js/geometric_shapes.js"></script>
+</body>
+
+</html>

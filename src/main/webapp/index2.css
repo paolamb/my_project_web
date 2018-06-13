@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+.title{
+    text-align: right;
+}
+
+.container {
+    position: relative;
+    max-width: 65%;
+    margin: 0 auto;
+}
+
+.container img {
+    vertical-align: middle;
+}
+
+.container .content {
+    position:absolute;
+    bottom:10%;
+    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 30px;
+}
+
+.challenge {
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 10px;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  .challenge:hover {
+      opacity: 0.5;
+  }
+
+          @media screen and (max-width: 1160px) {
+            .container {
+                width: 100%;
+            }
+
+            .challenge {
+                padding: 20px;
+                width: 30%;
+                text-align: center;
+                text-decoration: none;
+                margin: 5px 10px;
+                background: rgba(255, 255, 255, 0.8);
+              }
+        }
+
+          @media screen and (max-width: 900px) {
+            .container img .content {
+                width: 100%;
+            }
+            .challenge {
+                padding: 20px;
+                width: 25%;
+                text-align: center;
+                text-decoration: none;
+                margin: 5px 10px;
+                background: rgba(255, 255, 255, 0.8);
+              }
+              .title{
+                  font-size:1em;
+              }
+        }
+
+        @media screen and (max-width: 500px) {
+            .container img .content {
+                width: 100%;
+            }
+            .challenge {
+                padding: 20px;
+                width: 20%;
+                text-align: center;
+                text-decoration: none;
+                margin: 5px 10px;
+                background: rgba(255, 255, 255, 0.8);
+              }
+              .title{
+                  font-size:0.8em;
+              }
+        }
+
+    
+
+         
+
+  

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<meta name="author" content="Paola Martinez Bautista">
+	<meta name="description" content=" Choose alphabet kids challenge!">
+	<meta name="keywords" content="Choose consonants and vowels, kids challenge, color alphabet, JavaScript, CSS, HTML5">
+
+	<title>Alphabet Kids Challenge!</title>
+	<link rel="stylesheet" href="consonant.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="row">
+		<div class="col-full instructions">
+			<h1> Chose the correct vowel or consonant</h1>
+			<h2> Your score is
+				<span id="score">0</span>/26</h2>
+		</div>
+	</div>
+
+	<div class="row">
+		<div id="dropzone-holder" class="col-half ">
+			<div class="col-quarter hitbox">
+				<img id="question" class="answer hide" src="img/correct-green.png" />
+				<div id="dropzone-consonant-X" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-half hitbox">
+			<div id="dropzone-container" class="dropzone container" ondragenter="return enter(event)" ondragover="return over(event)"
+			 ondrop="return drop(event)">
+				<img id="icon-consonant-P" class="icon" onclick="imgClic('icon-consonant-P','consonant-P')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-P.png">
+				<img id="icon-consonant-R" class="icon" onclick="imgClic('icon-consonant-R','consonant-R')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-R.png">
+				<img id="icon-vowel-Ii" class="icon" onclick="imgClic('icon-vowel-Ii','vowel-Ii')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/vowel-Ii.png">
+				<img id="icon-consonant-D" class="icon" onclick="imgClic('icon-consonant-D' ,'consonant-D')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-D.png">
+				<img id="icon-consonant-S" class="icon" onclick="imgClic('icon-consonant-S','consonant-S')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-S.png">
+				<img id="icon-consonant-Z" class="icon" onclick="imgClic('icon-consonant-Z','consonant-Z')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-Z.png">
+				<img id="icon-consonant-H" class="icon" onclick="imgClic('icon-consonant-H' ,'consonant-H')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-H.png">
+				<img id="icon-vowel-Ee" class="icon" onclick="imgClic('icon-vowel-Ee','vowel-Ee')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/vowel-Ee.png">
+				<img id="icon-consonant-W" class="icon" onclick="imgClic('icon-consonant-W','consonant-W')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-W.png">
+				<img id="icon-vowel-Oo" class="icon" onclick="imgClic('icon-vowel-Oo','vowel-Oo')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/vowel-Oo.png">
+				<img id="icon-consonant-X" onclick="imgClic('icon-consonant-X','consonant-X')" class="icon" src="img/consonant-X.png">
+				<img id="icon-consonant-Y" class="icon" onclick="imgClic('icon-consonant-Y','consonant-Y')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-Y.png">
+				<img id="icon-consonant-N" class="icon" onclick="imgClic('icon-consonant-N','consonant-N')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-N.png">
+				<img id="icon-consonant-L" class="icon" onclick="imgClic('icon-consonant-L','consonant-L')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-L.png">
+				<img id="icon-consonant-F" class="icon" onclick="imgClic('icon-consonant-F' ,'consonant-F')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-F.png">
+				<img id="icon-consonant-Q" class="icon" onclick="imgClic('icon-consonant-Q','consonant-Q')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-Q.png">
+				<img id="icon-consonant-G" class="icon" onclick="imgClic('icon-consonant-G','consonant-G')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-G.png">
+				<img id="icon-consonant-J" onclick="imgClic('icon-consonant-J','consonant-J')" class="icon" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-J.png">
+				<img id="icon-consonant-B" onclick="imgClic('icon-consonant-B','consonant-B')" class="icon" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-B.png">
+				<img id="icon-consonant-M" onclick="imgClic('icon-consonant-M','consonant-M')" class="icon" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-M.png">
+				<img id="icon-vowel-Uu" class="icon" onclick="imgClic('icon-vowel-Uu','vowel-Uu')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/vowel-Uu.png">
+				<img id="icon-consonant-K" class="icon" onclick="imgClic('icon-consonant-K','consonant-K')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-K.png">
+				<img id="icon-consonant-V" class="icon" onclick="imgClic('icon-consonant-V' ,'consonant-V')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-V.png">
+				<img id="icon-consonant-C" class="icon" onclick="imgClic('icon-consonant-C','consonant-C')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-C.png">
+				<img id="icon-vowel-Aa" class="icon" onclick="imgClic('icon-vowel-Aa','vowel-Aa')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/vowel-Aa.png">
+				<img id="icon-consonant-T" class="icon" onclick="imgClic('icon-consonant-T','consonant-T')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/consonant-T.png">
+
+			</div>
+		</div>
+	</div>
+	<!-- The Modal -->
+
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2 style="text-align:center">Game Over!</h2>
+
+			<h3 style="text-align:center">Your score is
+				<span id="Modelscore">0</span>/26.
+			</h3>
+
+			<a href="index.html" id="btnHome" class="btn btn-primary" role="button">Home</a>
+
+			<a href="consonant.html" id="btnrefresh" class="btn btn-success">Refresh</a>
+		</div>
+		<!---->
+	</div>
+	<script type="text/javascript" src="js/consonant.js"></script>
+</body>
+
+</html>

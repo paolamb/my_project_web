@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<meta name="author" content="Paola Martinez Bautista">
+	<meta name="description" content="Choose fruit and vegetable kids challenge!">
+	<meta name="keywords" content="Choose fruit and vegetable, kids challenge, JavaScript, CSS, HTML5">
+
+	<title>Fruit and vegetable Kids Challenge!</title>
+
+	<link rel="stylesheet" href="fruit_vegetables.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="row">
+		<div class="col-full instructions">
+			<h1> Chose the correct fruit or vegetable </h1>
+			<h2> Your score is <span id="score">0</span>/10</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div id="dropzone-holder" class="col-half ">
+			<div class="col-quarter hitbox">
+				<img id="question" class="answer hide" src="img/correct-green.png" />
+				<div id="dropzone-apple" class="dropzone" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-half hitbox">
+			<div id="dropzone-container" class="dropzone container" ondragenter="return enter(event)" ondragover="return over(event)"
+			 ondrop="return drop(event)">
+				<img id="icon-apple" onclick="imgClic('icon-apple','apple')" class="icon" src="img/apple.png">
+				<img id="icon-bananas" class="icon" onclick="imgClic('icon-bananas','bananas')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/bananas.png">
+				<img id="icon-carrot" class="icon" onclick="imgClic('icon-carrot','carrot')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/carrot.png">
+				<img id="icon-cherries" class="icon" onclick="imgClic('icon-cherries','cherries')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/cherries.png">
+				<img id="icon-grapes" class="icon" onclick="imgClic('icon-grapes','grapes')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/grapes.png">
+				<img id="icon-lemon" class="icon" onclick="imgClic('icon-lemon' ,'lemon')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/lemon.png">
+				<img id="icon-pear" class="icon" onclick="imgClic('icon-pear','pear')" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/pear.png">
+				<img id="icon-strawberry" onclick="imgClic('icon-strawberry','strawberry')" class="icon" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/strawberry.png">
+				<img id="icon-tomato" onclick="imgClic('icon-tomato','tomato')" class="icon" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/tomato.png">
+				<img id="icon-watermelon" onclick="imgClic('icon-watermelon','watermelon')" class="icon" draggable="true" ondragstart="return start(event)"
+				 ondragend="return end(event)" src="img/watermelon.png">
+
+			</div>
+		</div>
+	</div>
+
+	<!-- The Modal -->
+
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2 style="text-align:center">Game Over!</h2>
+
+			<h3 style="text-align:center">Your score is
+				<span id="Modelscore">0</span>/10.
+			</h3>
+
+			<a href="index.html" id="btnHome" class="btn btn-primary" role="button">Home</a>
+
+			<a href="fruit_vegetables.html" id="btnrefresh" class="btn btn-success">Refresh</a>
+		</div>
+		<!---->
+	</div>
+	<script type="text/javascript" src="js/fruit_vegetables.js"></script>
+</body>
+
+</html>
